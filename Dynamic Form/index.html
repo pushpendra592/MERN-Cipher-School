@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<style>
+
+    body{
+        display:flex;
+        justify-content: center;
+    }
+    
+    form{
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 500px;
+        margin-top: 200px;
+        gap:20px;
+        border: 2px solid black;
+        padding: 10px;
+        border-radius: 25px;
+    }
+
+    .input{
+        height: 30px;
+        border-radius: 30px;
+        padding-left: 20px;
+    }
+    
+    .button{
+        height: 30px;
+        border-radius: 30px;
+        padding-left: 20px;
+        background-color: grey;
+    }
+
+
+</style>
+<body>
+    <form id="form">
+        <input id="inputName" class="input" required type="text" placeholder="Name" >
+        <input id="inputEmail" class="input" required type="email" placeholder="Email">
+        <input id="inputPassword" class="input" required minlength="6" type="password" placeholder="Password">
+        <button class="button" type="submit" onclick=submitForm()>Submit</button>
+    </form>
+    <script>
+        // let obj = {};
+        
+        
+        function submitForm(){
+            let form = document.getElementById("form");
+            form.addEventListener("submit", (ele) => {
+                ele.preventDefault();
+            })
+
+            let name = document.getElementById("inputName").value;
+            let email = document.getElementById("inputEmail").value;
+            let pass = document.getElementById("inputPassword").value;
+    
+            console.log(name, email, pass);
+            
+        }
+    
+    </script>
+</body>
+</html>

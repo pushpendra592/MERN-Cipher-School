@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: antiquewhite;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        #container{
+            height: 100px;
+            width: 100%;
+            background-color: gold;
+
+            border: 3px solid black;
+            border-radius: 10px;
+            
+            display: flex;
+            flex-direction: row;
+
+            /* justify-content: space-around; */
+            justify-content: space-evenly;
+
+            align-items: center;
+            
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;;
+        }
+
+        #container>p{
+            font-size: 24px;
+        }
+
+        .button-48 {
+          appearance: none;
+          background-color: #FFFFFF;
+          border-width: 0;
+          box-sizing: border-box;
+          color: #000000;
+          cursor: pointer;
+          display: inline-block;
+          font-family: Clarkson,Helvetica,sans-serif;
+          font-size: 14px;
+          font-weight: 500;
+          letter-spacing: 0;
+          line-height: 1em;
+          margin: 0;
+          opacity: 1;
+          outline: 0;
+          padding: 1.5em 2.2em;
+          position: relative;
+          text-align: center;
+          text-decoration: none;
+          text-rendering: geometricprecision;
+          text-transform: uppercase;
+          transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1),background-color 100ms cubic-bezier(.694, 0, 0.335, 1),color 100ms cubic-bezier(.694, 0, 0.335, 1);
+          user-select: none;
+          -webkit-user-select: none;
+          touch-action: manipulation;
+          vertical-align: baseline;
+          white-space: nowrap;
+        }
+
+        .button-48:before {
+          animation: opacityFallbackOut .5s step-end forwards;
+          backface-visibility: hidden;
+          background-color: #EBEBEB;
+          clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+          content: "";
+          height: 100%;
+          left: 0;
+          position: absolute;
+          top: 0;
+          transform: translateZ(0);
+          transition: clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1), -webkit-clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1);
+          width: 100%;
+        }
+
+        .button-48:hover:before {
+          animation: opacityFallbackIn 0s step-start forwards;
+          clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+        }
+
+        .button-48:after {
+          background-color: #FFFFFF;
+        }
+
+        .button-48 span {
+          z-index: 1;
+          position: relative;
+        }
+
+        /* 📱 Mobile */
+        @media (max-width: 576px) {
+            body {
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+        
+            #container {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 10px;
+            }
+        
+            #container > p {
+                font-size: 16px;
+            }
+        
+            #container button {
+                width: 100%;
+                max-width: 200px;
+            }
+        }
+
+
+        /* 📱 Tablet */
+        @media (max-width: 768px) {
+            body {
+                margin-left: 8%;
+                margin-right: 8%;
+            }
+        
+            #container {
+                justify-content: space-around;
+            }
+        
+            #container > p {
+                font-size: 20px;
+            }
+        
+            #container button {
+                padding: 6px 12px;
+            }
+        }
+
+
+        /* 💻 Small Laptop */
+        @media (max-width: 992px) {
+            body {
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+        
+            #container > p {
+                font-size: 22px;
+            }
+        }
+
+    </style>
+    
+    <div id="container">
+        <p>Home</p>
+        <p>About</p>
+        <p>Contact</p>
+        <button class="button-48" role="button"><span class="text">Signup</span></button>
+        <button class="button-48" role="button"><span class="text">Login</span></button>
+    </div>
+    
+</body>
+</html>

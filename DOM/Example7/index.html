@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style=" width: 200px; height: 200px; background-color: cyan"></div>
+</body>
+</html>
+
+<script>
+    let body = document.querySelector("body");
+    body.style.height = "500px";
+    body.style.display = "flex";
+    body.style.justifyContent = "center";
+    body.style.alignItems = "center";
+
+    let div = document.querySelector("div");
+    div.style.borderRadius= "200px"
+
+    div.addEventListener("mouseover", () =>{
+        div.style.backgroundColor = "red";
+    })
+    div.addEventListener("mouseout", () =>{
+        div.style.backgroundColor = "cyan";
+    })
+</script>

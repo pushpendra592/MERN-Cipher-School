@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #parent{
+            border: 5px solid black;
+            width:500px;
+            height: 500px;
+            background-color: aquamarine;
+            margin: 100px auto;
+
+            /* background-image: url("./wallpapersden.com_jujutsu-kaisen-blue-eyes_2184x1224.jpg"); */
+
+            transition: 1s;
+        }
+
+        #child{
+            width: 200px;
+            height: 200px;
+            border: 5px solid black;
+            background-color: goldenrod;
+            margin: 150px;
+            transition: 0.5s;
+            position: absolute;
+        }
+
+        #child:hover{
+            transform: scale(0.25) ;
+            background-color: purple;
+            border-radius: 50%;
+            visibility: 0%;
+        }
+
+        #parent:hover{
+            background-image: url("wallpapersden.com_jujutsu-kaisen-blue-eyes_2184x1224.jpg");
+            background-size: cover;
+            border-radius: 40px;
+            height: 300px;
+            transform: translate(0,100px)
+
+        }
+    </style>
+
+    <div id="parent">
+        <div id="child"></div>
+    </div>
+</body>
+</html>

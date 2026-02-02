@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+</body>
+</html>
+<script>
+    // let parent = document.createElement("div");
+    // parent.id = "parent";
+    // // parent.innerText = "Hello I Am Parent";    
+    // parent.innerHTML="<h1>Hello I Am Child</h1>";
+    
+    // let child = document.createElement("div");
+    // child.id = "child";
+    // child.innerText = "Hello I Am Child";    
+    
+    // document.body.append(parent, child)
+
+    let container = document.createElement("div");
+    // container.style.border = "1px solid black";
+    container.style.display = "flex";
+    container.style.justifyContent = "center";
+    
+    
+    let box = document.createElement("div");
+    box.style.width = "300px";
+    box.style.border = "1px solid black";
+    box.style.borderRadius = "30px";
+    box.style.alignContent = "center"
+    box.style.textAlign = "center"
+    box.style.display = "flex";
+    box.style.justifyContent = "center";
+    box.style.flexDirection = "column";
+
+    
+    let image = document.createElement("img");
+    image.src = "./image.png";
+    image.alt = "Blogging Image";
+    image.style.borderRadius="30px 30px 0 0";
+    
+    let text = document.createElement("h1");
+    text.innerText = "Let's Blog!!";
+    
+    
+    
+    box.append(image, text);
+    container.appendChild(box)
+    document.body.appendChild(container);
+
+
+</script>

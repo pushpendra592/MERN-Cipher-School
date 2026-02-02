@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #parent{
+            border: 5px solid black;
+            width:500px;
+            background-color: aquamarine;
+            margin: 100px auto;
+            background-image: url("wallpapersden.com_jujutsu-kaisen-blue-eyes_2184x1224.jpg");
+            background-size: cover;
+            border-radius: 40px;
+            height: 300px;
+            animation: slide-in 2s linear infinite;
+        }
+
+        @keyframes slide-in{
+            0%{
+                transform: translateY(0%);
+            }
+
+            50%{
+                transform:translateY(50%)
+            }
+            
+            100%{
+                transform: translateY(100%);
+            }
+        }
+
+        #parent:hover{
+            animation: slide-in 2s;
+        }
+
+    </style>
+
+    <div id="parent"></div>
+</body>
+</html>

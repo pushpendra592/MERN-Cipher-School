@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .container{
+            display:grid;
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: repeat(3, 200px);
+            width:816px;
+            height: 816px;
+            border: 2px solid black;
+            margin: auto;
+            padding: auto;
+            justify-content: center;
+            grid-template-areas: "box1 box2 box2"
+                                 "box3 box3 box4"
+                                 "box5 box6 box4";
+
+        }
+        
+        .container>div{
+            border: 2px solid black;
+            width:200px;
+            height: 200px;
+            margin:0;
+            padding:0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container>div:nth-child(1){
+            grid-row-start: 1;
+            grid-row-end: 2;
+
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+
+        .container>div:nth-child(2){
+            grid-row-start: 1;
+            grid-row-end: 2;
+    
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+        
+        .container>div:nth-child(3){
+            grid-row-start: 2;
+            grid-row-end: 3;
+    
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+        .container>div:nth-child(1){
+            height: 400px;
+        }
+        .container>div:nth-child(1){
+            height: 400px;
+        }
+        .container>div:nth-child(1){
+            height: 400px;
+        }
+
+    </style>
+    <dic class="container">
+        <div>Box 1</div>
+        <div>Box 2</div>
+        <div>Box 3</div>
+        <div>Box 4</div>
+        <div>Box 5</div>
+        <div>Box 6</div>
+
+    </dic>
+</body>
+</html>

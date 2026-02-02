@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="parent" style="width: 200px; height: 200px; background-color: cyan">
+        <div class="child" style=" width: 50px; height: 50px; background-color: orange" ></div>
+    </div>
+</body>
+</html>
+
+<script>
+    let body = document.querySelector("body");
+    body.style.height = "500px";
+    body.style.display = "flex";
+    body.style.justifyContent = "center";
+    body.style.alignItems = "center";
+
+    let parent = document.querySelector(".parent");
+    parent.style.display = "flex";
+    parent.style.justifyContent = "center";
+    parent.style.alignItems = "center";
+    parent.style.borderRadius= "200px"
+    parent.style.border= "2px solid black"
+    
+    let child = parent.children;
+
+    console.log(child);
+    
+    // child.style.borderRadius= "50px"
+    // child.style.border= "2px solid black"
+    
+    // parent.addEventListener("click", () =>{
+    //     console.log("Parent is clicked");
+    // }, true)
+    
+    // child.addEventListener("click", () =>{
+    //     // event.stopPropagation(); => stops even Bubbling 
+    //     console.log("Child is clicked");
+    // })
+</script>
+
+<!-- 
+child is clicked => first child log's then parent log's => Event-Bubbling
+child is clicked => first parent log's then child log's => Event-capturing
+event-deligation => 
+-->

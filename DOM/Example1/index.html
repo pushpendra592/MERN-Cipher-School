@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+</style>
+<body>
+
+
+
+    <div id="parent"><h1>HELLO</h1></div>
+    <p class="pTag">this is a p tag</p>
+    <p class="pTag">this is a p tag</p>
+    <p class="pTag">this is a p tag</p>
+    <p class="pTag">this is a p tag</p>
+    <p class="pTag">this is a p tag</p>
+
+
+
+</body>
+</html>
+<script>
+    
+    let p = document.getElementsByClassName("pTag");
+    console.log(p);
+    
+    let tag = document.getElementsByTagName("p");
+    console.log(tag);
+    
+    // let q = document.querySelector(".pTag");
+    // console.log(q);
+    
+    let q = document.querySelectorAll(".pTag");
+    console.log(q);
+    
+    let second = q[1];
+    second.style.color = "red";
+    second.style.fontSize = "100px";
+    
+    q.forEach((ele, ind) => {
+        if(ind % 2 === 0){
+            ele.style.color = "blue";
+            ele.style.fontSize = "20px";
+        }else{
+            ele.style.color = "red";
+            ele.style.fontSize = "20px";
+        }
+    })
+    
+    let div = document.getElementById("parent");
+    // console.log(div);
+    
+    let h1 = document.querySelector("#parent>h1");
+    h1.style.color ="green"
+
+    
+</script>
+
+<!-- 
+getElementById()
+getElementByClassName()
+getElementByTagName()
+querySelector()
+querySelectorAll()
+-->

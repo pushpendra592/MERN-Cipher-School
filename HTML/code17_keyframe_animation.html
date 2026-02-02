@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #parent{
+            border: 5px solid black;
+            width:500px;
+            height: 500px;
+            background-color: aquamarine;
+            margin: 100px auto;
+            display: grid;
+            grid-template-rows: repeat(1, 1fr);
+            grid-template-columns: repeat(2, 200px);
+            gap: 20px;
+            border-radius: 50%;
+        }
+        
+        .child{
+            width: 200px;
+            height: 200px;
+            border: 5px solid black;
+            border-radius: 50%;
+            background-color: goldenrod;
+            margin: auto 35px auto 35px;
+            transition: 0.5s;
+
+            animation: slide-in 2s;
+        }
+        
+        @keyframes slide-left {
+            to {
+                transform: translateX(-100px);
+            }
+        }
+        
+        @keyframes slide-right {
+            to {
+                transform: translateX(100px);
+            }
+        }
+        
+        #parent>div:nth-child(1){
+            animation: slide-left 2s ease-in-out alternate infinite;
+        }
+        
+        #parent>div:nth-child(2){
+            animation: slide-right 2s ease-in-out alternate infinite;
+        }
+    </style>
+
+    <div id="parent">
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+</body>
+</html>

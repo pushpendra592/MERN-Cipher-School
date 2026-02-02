@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    nav{
+        background-color: #222;
+        padding: 12px;
+    }
+
+    nav>a{
+        color: white;
+        margin-right: 20px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+</style>
+<body>
+</body>
+</html>
+<script>
+    const nav = document.createElement("nav");
+
+    const link = [
+        {text: "Home", href:"#"},
+        {text: "About", href:"#"},
+        {text: "Projects", href:"#"},
+        {text: "Contact", href:"#"}
+    ]
+
+    link.forEach(element => {
+        const a = document.createElement("a");
+        a.innerText=element.text;
+        a.href=element.href;
+        nav.appendChild(a);
+    });
+
+    document.body.appendChild(nav);
+</script>
